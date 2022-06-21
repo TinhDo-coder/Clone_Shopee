@@ -1,0 +1,37 @@
+/* dùng biến cục bộ để dễ dàng thay đổi các thuộc tính chung sd lại nhiều */
+:root{
+    --white-color:#fff;
+    --text-color:#333;
+    --black-color:#000;
+    --primary-color:#EE4D2D;
+}
+
+/* resset lại css vì mặc định một số thẻ sẽ có các thuộc tính margin, padding... trên 1 số trình duyệt */
+
+*{
+    box-sizing: inherit; 
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    line-height: 1.6 rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* bổ trợ cho việc dùng reponsive sau này */
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+.grid__full-width{
+    width: 100%;
+
+}
+
+.grid__row{
+    display: flex;
+    flex-wrap: wrap;
+}
