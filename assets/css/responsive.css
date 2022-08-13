@@ -1,0 +1,200 @@
+/* Mobile & Table */
+@media (max-width:1023px){
+
+    .hide-on-mobile-table{
+        display: none;
+    }
+   .header__cart-list{
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    width: 100%;
+    padding: 0px calc((100% - 644px)/2);
+   }
+   .header__cart-list::after{
+    border-color: transparent;
+    width: 25%;
+    top: -20px;
+   }
+   .header__cart-item-remove-icon{
+    font-size: 18px;
+   }
+   .header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+   }
+   .header__sort-bar{
+    display: flex;
+   }
+   .header__sort-item--active .header__sort-item-link{
+    color: var(--primary-color);
+   }
+   .app__container{
+    margin-top:calc(var(--header-height) + var(--header-sort-height));
+   }
+   .footer__policy-link{
+    text-align: left;
+    padding: 0px 58px;
+    margin: 16px 0;
+   }
+   .app__content {
+    padding-top: 8px;
+}
+}
+/* Table */
+@media (min-width:740px) and (max-width:1023px){
+    :root{
+        --header-height:68px;
+        --header-navbar-height:0px;
+    }
+    .hide-on-table{
+        display: none;
+    }
+    .header__cart{
+        width: 80px;
+        text-align: right;
+    }
+    .header__cart-notice{
+        top: 3px;
+        right: -15px;
+    }
+    .pagination-item {
+        margin: 0px 10px;
+    }
+    .header__menu-and-search{
+        display: flex;
+        margin-right: 26px;
+        margin-left: -32px;
+    }
+    /* chỉ show menu */
+    .header__mobile-search{
+        display: none;
+    }
+    .header__mobile-menu--has-active:checked ~ .header__mobile-search-overlay{
+        display: block;
+    }
+    
+
+}
+
+/* Mobile */
+@media (max-width:739px){
+    :root{
+        --header-height:54px;
+        --header-navbar-height:0px;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    .header-with-search{
+    justify-content: space-between;
+    }
+    .header__cart, .header__logo{
+        width: unset;
+    }
+    .header__cart,.header__mobile-search{
+        margin: 0px 28px;
+    }
+    .header__cart-wrap:hover .header__cart-list{
+        display: none;
+    }
+    .header__check-cart--is-active:checked ~ .header__cart-list{
+        display: block !important;
+    }
+    .header__logo-link{
+        display: block;
+        height: var((--header-height)/2);
+    }
+    .header__search{
+        display: block;
+        position: fixed;
+        top: var(--header-height);
+        left: 0px;
+        right: 0;
+        width: 100%;
+        z-index: 1;
+        height: var(--header-sort-height);
+        justify-content: space-around;
+        display: none;
+    }
+    .header__search-history{
+        left: 16px;
+        padding-left: 6px;
+    }
+    .header__mobile-checkbox:checked ~ .header__search{
+        display: flex;
+        animation: mobile__search-Fadin linear 0.3s;
+    }
+    .pagination-item {
+        margin: 0px 1px;
+    }
+    .footer__list,.footer__heading,.footer__download{
+        padding-left: 40px;
+    }
+    .header__mobile-checkbox:checked ~ .header__mobile-search-overlay{
+        display: block;
+    }
+    .header__mobile-menu--has-active:checked ~ .header__mobile-search-overlay{
+        display: block;
+    }
+    .header__mobile-search-btn{
+        padding-right: 28px;
+    }
+    .header__search-input-wrap{
+        padding-left: 28px;
+    }
+    /* .header__mobile-search{
+    } */
+    .header__menu-and-search{
+        display: flex;
+    }
+    .pagination-item__link{
+        min-width: 34px;
+        --height: 28px;
+        font-size: 1.6rem;
+    }
+    .footer__certification-link{
+        margin: 0px 5px;
+    }
+    .app__content{
+        margin: 0px 4px;
+    }
+    .header__search-input{
+        
+    }
+    .header__search-input {
+        width: max-content;
+    }
+    
+    .footer__content-list{
+        text-align: center;
+        
+    }
+    .footer__download{
+        justify-content: center;
+        width: 100%;
+    }
+    .footer__content-download{
+        text-align: center;
+    }
+    .footer__heading, .footer__list{
+        padding-left: unset;
+    }
+    .footer__item{
+        justify-content: center;
+    }
+}
+@media (max-width:376px){
+    .header-with-search{
+        justify-content: space-around;
+    }
+    .header__logo-img{
+        width: 114px;
+    }
+    .header__cart, .header__mobile-search {
+        margin: 0px 18px;
+    }
+}
